@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FF00"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ActivityView.DV_ServiceView">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#FF00FF"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="THÔNG TIN ĐĂNG KÝ GÓI DỊCH VỤ "
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/listview_dK_goi_DV"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

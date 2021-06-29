@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/tv_Makh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="MaKH"
+    android:textSize="24sp"
+    />
+    <TextView
+        android:id="@+id/tv_tenkh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên khách hàng "
+        android:textSize="24sp"
+        />
+    <TextView
+        android:id="@+id/DiaChikh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ "
+        android:textSize="24sp"
+        />
+    <TextView
+        android:id="@+id/tv_Gioitinhkh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giới tính "
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/sdtkh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại "
+        android:textSize="24sp"
+        />
+
+</LinearLayout>

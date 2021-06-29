@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#00FF00"
+    android:weightSum="3.5"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ĐĂNG NHẬP HỆ THỐNG "
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="#FF00FF"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        />
+    <EditText
+        android:id="@+id/editext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawable="@drawable/custums_edittext"
+        android:drawableLeft="@mipmap/user"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="80dp"
+        android:hint="Username"
+        />
+
+    <EditText
+        android:id="@+id/editext_pass"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:drawableLeft="@mipmap/pass"
+        android:textSize="16sp"
+        android:hint="Password"
+        />
+
+    <Button
+        android:id="@+id/btn_dangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="ĐĂNG NHÂP"
+        android:layout_weight="0.5"
+        android:background="@drawable/custom_buton1"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp"
+        />
+</LinearLayout>

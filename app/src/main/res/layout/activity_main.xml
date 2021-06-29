@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:padding="16dp"
+    android:background="#00FF00"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HỆ THỐNG QUẢN LÝ BỂ BƠI "
+        android:textSize="30dp"
+        android:layout_weight="1"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:textColor="#FF00FF"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/btn_khachhang"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:text="KHÁCH HÀNG "
+        android:background="@drawable/custom_buton1"
+        />
+
+        <Button
+            android:id="@+id/btn_banggiadichvu"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:background="@drawable/custom_buton1"
+            android:layout_marginLeft="25dp"
+            android:text="BẢNG GIÁ DỊCH VỤ  "
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="3"
+
+    >
+
+        <Button
+            android:id="@+id/btn_chuongtrinhkhuyenmai"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:background="@drawable/custom_buton1"
+            android:text="CHƯƠNG TRÌNH KHUYẾN MẠI" />
+
+        <Button
+            android:id="@+id/btn_dangkigoidichvu"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/custom_buton1"
+            android:text="ĐĂNG KÝ GÓI DỊCH VỤ " />
+
+    </LinearLayout>
+</LinearLayout>
