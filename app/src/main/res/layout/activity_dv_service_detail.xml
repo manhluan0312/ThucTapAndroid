@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".Detail.DV_Service_Detail">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THÔNG TIN DỊCH VỤ  "
+        android:textColor="@color/red"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã dịch vụ:"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/tv_madv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên dịch vụ: "
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/tv_tendv_detail"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá dịch vụ:"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/tv_giadv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:textStyle="italic"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số ngày của dịch vụ :"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/tv_ngaydv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:textStyle="italic"
+            />
+    </LinearLayout>
+</LinearLayout>

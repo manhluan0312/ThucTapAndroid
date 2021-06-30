@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 
@@ -37,22 +40,19 @@ public class LoginActivity extends AppCompatActivity {
                 String pass =edit_password.getText().toString().trim();
 
 
-           /*
+
                if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
                 {
                     Toast.makeText(LoginActivity.this,"Vui lòng nhập thông tin ",Toast.LENGTH_SHORT).show();
                 }
-           */
-                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+
+                //Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                //startActivity(intent);
                 DangNhap();
            }
 
             private void DangNhap()
             {
-
-
-
 
             }
 

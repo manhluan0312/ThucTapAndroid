@@ -81,6 +81,12 @@ public class CustomerView extends AppCompatActivity {
         RequestQueue requestQueue =Volley.newRequestQueue(this);
         requestQueue.add(JsonObjectRequest);
 
+
+
+
+
+
+
         lv_khachhang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

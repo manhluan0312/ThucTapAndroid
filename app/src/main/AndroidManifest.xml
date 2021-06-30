@@ -14,12 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BT_ThucTap"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Detail.Customer_Detail"
+        <activity android:name=".Detail.DV_Service_Detail"
+            android:label="Chi tiết dịch vụ "
+            android:parentActivityName=".ActivityView.DV_ServiceView" />
+
+        <activity android:name=".Detail.Promotion_Detail"
+            android:label="Chi tiết khuyến mãi "
+            android:parentActivityName=".ActivityView.PromotionView" />
+
+        <activity android:name=".Detail.DangKiDV_Detail"
+            android:label="Chi tiết đăng ký dịch vụ "
+            android:parentActivityName=".ActivityView.DangKiDVView" />
+        <activity
+            android:name=".Detail.Customer_Detail"
             android:label="Chi tiết khách hàng "
-            android:parentActivityName=".ActivityView.CustomerView"
-            ></activity>
-
-
+            android:parentActivityName=".ActivityView.CustomerView" />
         <activity
             android:name=".ActivityView.DangKiDVView"
             android:label="Đăng ký gói dịch vụ"
