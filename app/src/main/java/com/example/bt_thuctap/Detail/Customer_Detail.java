@@ -1,0 +1,46 @@
+package com.example.bt_thuctap.Detail;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import com.example.bt_thuctap.R;
+import com.example.bt_thuctap.model.Customer;
+
+import static com.example.bt_thuctap.ActivityView.CustomerView.TITLE;
+
+public class Customer_Detail extends AppCompatActivity {
+ TextView tv_mkh,tv_tenkh,tv_diachi,tv_gioitinh,tv_sdt;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_customer_detail);
+        AnhXa();
+
+        String id=getIntent().getStringExtra("ID");
+        String ten=getIntent().getStringExtra("Ten");
+        String diachi=getIntent().getStringExtra("DiaChi");
+        String gioitinh=getIntent().getStringExtra("GioiTinh");
+        String sdt=getIntent().getStringExtra("SDT");
+
+        tv_mkh.setText(id);
+        tv_tenkh.setText(ten);
+        tv_diachi.setText(diachi);
+        tv_gioitinh.setText(gioitinh);
+        tv_sdt.setText(sdt);
+
+    }
+
+    private void AnhXa()
+    {
+        tv_mkh=findViewById(R.id.tv_makh_detail);
+        tv_tenkh=findViewById(R.id.tv_tenkh_detail);
+        tv_diachi=findViewById(R.id.tv_DiaChikh_detail);
+        tv_gioitinh=findViewById(R.id.tv_gtkh_detail);
+        tv_sdt=findViewById(R.id.tv_sdtkh_dettail);
+
+    }
+
+}

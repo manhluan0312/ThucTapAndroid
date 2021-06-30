@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.bt_thuctap.Detail.Customer_Detail;
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.adapter.CustomerAdapter;
 import com.example.bt_thuctap.common.Constant;
@@ -31,8 +32,12 @@ import java.util.Map;
 
 
 public class CustomerView extends AppCompatActivity {
+
+    public static final String TITLE="Thôngtinchitiếtkháchhàng ";
+
     private Gson gson = new Gson();
     ArrayList<Customer> customerArray = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,11 +84,16 @@ public class CustomerView extends AppCompatActivity {
         lv_khachhang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Customer customer= customerArray.get(position);
-                Customer customer =new Customer();
-                Intent intent =new Intent(CustomerView.this,Customer_Infor.class);
-                intent.putExtra("ID", customer.getMaKH());
-                intent.putExtra("Ten",customer.getTenKH());
+
+                Customer customer ;
+
+                Intent intent =new Intent(CustomerView.this, Customer_Detail.class);
+
+                intent.putExtra("ID",customerArray.get(position).getMaKH());
+                intent.putExtra("Ten",customerArray.get(position).getTenKH());
+                intent.putExtra("DiaChi",customerArray.get(position).getDiaChi());
+                intent.putExtra("GioiTinh",customerArray.get(position).isGioiTinh());
+                intent.putExtra("SDT",customerArray.get(position).getSDT());
                 startActivity(intent);
             }
         });

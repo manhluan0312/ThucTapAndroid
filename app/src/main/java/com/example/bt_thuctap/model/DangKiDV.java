@@ -9,28 +9,28 @@ public class DangKiDV
     @SerializedName("id")
     private int  id;
 
-    @SerializedName("id_service")
+    @SerializedName("service_id")
     private int  id_service;
 
-    @SerializedName("id_promotion")
+    @SerializedName("promotion_id")
     private int  id_promtion;
 
-    @SerializedName("id_customer")
+    @SerializedName("customer_id")
     private int  id_customer;
 
-    @SerializedName("thoigiandk")
-    private Date ThoiGianDK;
+    @SerializedName("timeRegister")
+    private String ThoiGianDK;
 
-    @SerializedName("thoigiankichhoat")
-    private Date ThoiGianKichHoat;
+    @SerializedName("timeActivated")
+    private String ThoiGianKichHoat;
 
-    @SerializedName("thoigiankethuc")
-    private Date ThoiGianKetThuc;
+    @SerializedName("timeEnd")
+    private String ThoiGianKetThuc;
 
-    @SerializedName("songaydk")
+    @SerializedName("day")
     private int SoNgayDK;
 
-    @SerializedName("gia")
+    @SerializedName("price")
     private float Gia;
 
     @SerializedName("pay")
@@ -68,27 +68,27 @@ public class DangKiDV
         this.id_customer = id_customer;
     }
 
-    public Date getThoiGianDK() {
+    public String getThoiGianDK() {
         return ThoiGianDK;
     }
 
-    public void setThoiGianDK(Date thoiGianDK) {
+    public void setThoiGianDK(String thoiGianDK) {
         ThoiGianDK = thoiGianDK;
     }
 
-    public Date getThoiGianKichHoat() {
+    public String getThoiGianKichHoat() {
         return ThoiGianKichHoat;
     }
 
-    public void setThoiGianKichHoat(Date thoiGianKichHoat) {
+    public void setThoiGianKichHoat(String thoiGianKichHoat) {
         ThoiGianKichHoat = thoiGianKichHoat;
     }
 
-    public Date getThoiGianKetThuc() {
+    public String getThoiGianKetThuc() {
         return ThoiGianKetThuc;
     }
 
-    public void setThoiGianKetThuc(Date thoiGianKetThuc) {
+    public void setThoiGianKetThuc(String thoiGianKetThuc) {
         ThoiGianKetThuc = thoiGianKetThuc;
     }
 

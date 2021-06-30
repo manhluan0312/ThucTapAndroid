@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".ActivityView.DV_ServiceView">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +18,15 @@
         android:layout_marginBottom="40dp"
         android:text="DANH SÁCH CÁC DỊCH VỤ "
         android:gravity="center"/>
+
+   <androidx.appcompat.widget.SearchView
+       android:id="@+id/search_dv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:queryHint="Tìm kiếm ..."
+       android:layout_margin="2dp"
+       app:iconifiedByDefault="false"
+       />
 
     <ListView
         android:id="@+id/listview_dv_service"

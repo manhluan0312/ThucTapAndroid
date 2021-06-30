@@ -6,27 +6,39 @@ import java.util.Date;
 
 public class Promotion
 {
-
     @SerializedName("id")
     private int id;
 
-    @SerializedName("id_service")
+    @SerializedName("service_id")
     private int id_service;
 
-    @SerializedName("tenkhuyenmai")
+    @SerializedName("name")
     private String TenKhuyenMai;
 
-    @SerializedName("thoigianbatdaukm")
-    private Date ThoiGianBatDauKM ;
+    @SerializedName("timeBegin")
+    private String ThoiGianBatDauKM ;
 
-    @SerializedName("thoigianketthuckhuyenmai")
-    private Date ThoiGianKetThucKM;
+    @SerializedName("timeEnd")
+    private String ThoiGianKetThucKM;
 
-    @SerializedName("giakm")
+    @SerializedName("pricePromotion")
     private int GiaKM;
 
-    @SerializedName("songaykm")
+    @SerializedName("dayPromotion")
     private int SoNgayKM;
+
+    public Promotion() {
+    }
+
+    public Promotion(int id, int id_service, String tenKhuyenMai, String thoiGianBatDauKM, String thoiGianKetThucKM, int giaKM, int soNgayKM) {
+        this.id = id;
+        this.id_service = id_service;
+        TenKhuyenMai = tenKhuyenMai;
+        ThoiGianBatDauKM = thoiGianBatDauKM;
+        ThoiGianKetThucKM = thoiGianKetThucKM;
+        GiaKM = giaKM;
+        SoNgayKM = soNgayKM;
+    }
 
     public int getId() {
         return id;
@@ -52,19 +64,19 @@ public class Promotion
         TenKhuyenMai = tenKhuyenMai;
     }
 
-    public Date getThoiGianBatDauKM() {
+    public String getThoiGianBatDauKM() {
         return ThoiGianBatDauKM;
     }
 
-    public void setThoiGianBatDauKM(Date thoiGianBatDauKM) {
+    public void setThoiGianBatDauKM(String thoiGianBatDauKM) {
         ThoiGianBatDauKM = thoiGianBatDauKM;
     }
 
-    public Date getThoiGianKetThucKM() {
+    public String getThoiGianKetThucKM() {
         return ThoiGianKetThucKM;
     }
 
-    public void setThoiGianKetThucKM(Date thoiGianKetThucKM) {
+    public void setThoiGianKetThucKM(String thoiGianKetThucKM) {
         ThoiGianKetThucKM = thoiGianKetThucKM;
     }
 

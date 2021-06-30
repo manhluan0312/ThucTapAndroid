@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.model.Promotion;
 
+import java.util.Date;
 import java.util.List;
 
 public class PromotionAdapter extends BaseAdapter
@@ -61,12 +62,11 @@ public class PromotionAdapter extends BaseAdapter
 
         Promotion promotion=new Promotion();
         promotion =arrayPromotion.get(position);
-        tv_id_pro.setText(promotion.getId());
-        tv_id_service.setText(promotion.getId_service());
-        tv_tenkm.setText(promotion.getTenKhuyenMai());
-
-        tv_tgbd_km.setText((""+promotion.getThoiGianBatDauKM()));
-        tv_tgbd_km.setText((""+promotion.getThoiGianKetThucKM()));
+        tv_id_pro.setText(""+promotion.getId());
+        tv_id_service.setText(""+promotion.getId_service());
+        tv_tenkm.setText(""+promotion.getTenKhuyenMai());
+        tv_tgbd_km.setText(""+promotion.getThoiGianBatDauKM());
+        tv_tgkt_km.setText(""+ promotion.getThoiGianKetThucKM());
         tv_gia_km.setText(""+promotion.getGiaKM());
         tv_ngaykm.setText(""+promotion.getSoNgayKM());
 

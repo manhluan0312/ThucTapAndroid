@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -13,9 +14,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.bt_thuctap.API.APIResponeDangKiDVModel;
-import com.example.bt_thuctap.API.APIResponseCustomerModel;
 import com.example.bt_thuctap.R;
-import com.example.bt_thuctap.adapter.CustomerAdapter;
 import com.example.bt_thuctap.adapter.DangKiDVAdapter;
 import com.example.bt_thuctap.common.Constant;
 import com.example.bt_thuctap.model.Customer;
@@ -73,4 +72,6 @@ public class DangKiDVView extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(JsonObjectRequest);
     }
-}
+
+
+    }

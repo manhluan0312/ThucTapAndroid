@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.content.Context;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,11 +25,13 @@ public class DV_ServiceAdapter extends BaseAdapter {
     Context myContext;
     int myLayout;
     ArrayList<DV_Service> arrayDV_Services;
+    ArrayList<DV_Service> arrayDV_ServicesOld;
 
     public DV_ServiceAdapter(Context myContext, int myLayout, ArrayList<DV_Service> arrayDV_Services) {
         this.myContext = myContext;
         this.myLayout = myLayout;
         this.arrayDV_Services = arrayDV_Services;
+        this.arrayDV_ServicesOld=arrayDV_Services;
     }
 
     @Override
@@ -66,5 +70,43 @@ public class DV_ServiceAdapter extends BaseAdapter {
 
         return convertView;
 
+    }
+
+
+    public Filter getFilter()
+    {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String search =constraint.toString();//tu can search
+                if(search.isEmpty())//tu tim kiem
+                {
+                    arrayDV_Services=arrayDV_ServicesOld;//danh sach moi bang ds ban dau
+                }
+                else
+                {
+                    ArrayList<DV_Service> list =new ArrayList<>();
+                    for(DV_Service dv_service:arrayDV_ServicesOld)
+                    {
+                        if(dv_service.getTenDV().toLowerCase().contains(search.toLowerCase()))  //ep kieu tu can tim ve in thuong
+                        {
+                            list.add(dv_service);//tra ve list tu can tim phu hop
+                        }
+                    }
+
+                    arrayDV_Services =list;
+                }
+                FilterResults filterResults=new FilterResults();
+                filterResults.values=arrayDV_Services;//tra ve ket qua
+
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+               arrayDV_Services= (ArrayList<DV_Service>) results.values;
+               notifyDataSetChanged();
+            }
+        };
     }
 }

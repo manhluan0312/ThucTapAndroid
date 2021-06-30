@@ -68,7 +68,7 @@ public class DangKiDVAdapter extends BaseAdapter
         tv_tgdk.setText(""+dangKiDV.getThoiGianDK());
         tv_tgkh.setText(""+dangKiDV.getThoiGianKichHoat());
         tv_tgkt.setText("" +dangKiDV.getThoiGianKetThuc());
-        tv_ngay.setText(dangKiDV.getSoNgayDK());
+        tv_ngay.setText(""+dangKiDV.getSoNgayDK());
         tv_gia.setText(""+dangKiDV.getGia());
 
         if(dangKiDV.isPay()==true)

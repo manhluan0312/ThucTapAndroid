@@ -6,6 +6,5 @@
         android:id="@+id/dangxuat"
         app:showAsAction="always"
         android:icon="@drawable/dangxuat"
-
         />
 </menu>

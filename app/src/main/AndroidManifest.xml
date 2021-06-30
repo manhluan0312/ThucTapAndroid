@@ -14,13 +14,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BT_ThucTap"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityView.Customer_Infor"></activity>
-        <activity android:name=".ActivityView.DangKiDVView" />
-        <activity android:name=".ActivityView.PromotionView" />
-        <activity android:name=".ActivityView.DV_ServiceView" />
-        <activity android:name=".ActivityView.CustomerView" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Detail.Customer_Detail"
+            android:label="Chi tiết khách hàng "
+            android:parentActivityName=".ActivityView.CustomerView"
+            ></activity>
+
+
+        <activity
+            android:name=".ActivityView.DangKiDVView"
+            android:label="Đăng ký gói dịch vụ"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityView.PromotionView"
+            android:label="Chương trình khuyến mãi "
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityView.DV_ServiceView"
+            android:label="Dịch vụ "
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityView.CustomerView"
+            android:label="Khách hàng"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Trang chủ" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Đăng nhập hệ thống ">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
