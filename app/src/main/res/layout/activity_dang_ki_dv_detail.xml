@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:orientation="vertical"
     tools:context=".Detail.DangKiDV_Detail">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THÔNG TIN ĐĂNG KÝ GÓI DỊCH VỤ "
+        android:text="THÔNG TIN CHI TIẾT"
         android:textColor="@color/red"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:layout_gravity="center"
         android:textSize="24sp"
         />
@@ -27,6 +35,8 @@
             android:layout_height="wrap_content"
             android:text="Mã  đăng ký dịch vụ:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -35,6 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textSize="24sp"
             />
@@ -50,6 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mã dịch vụ : "
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:layout_weight="1"
             android:textSize="24sp"
@@ -58,6 +72,8 @@
             android:id="@+id/tv_madv_dkgdv_detail"
             android:textStyle="italic"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
@@ -75,6 +91,8 @@
             android:layout_height="wrap_content"
             android:text="Mã khuyến mãi:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -83,6 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -98,6 +118,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mã khách hàng:"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -107,6 +129,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -123,6 +147,8 @@
             android:layout_height="wrap_content"
             android:text="Thời gian đăng ký:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -131,6 +157,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -146,6 +174,8 @@
             android:layout_height="wrap_content"
             android:text="Thời gian kích hoạt:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -154,6 +184,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -169,6 +201,8 @@
             android:layout_height="wrap_content"
             android:text="Thời gian kết thúc:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -177,6 +211,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -192,6 +228,8 @@
             android:layout_height="wrap_content"
             android:text="Số ngày đã đăng ký :"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -200,6 +238,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -215,6 +255,8 @@
             android:layout_height="wrap_content"
             android:text="Giá tiền phải trả:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -223,6 +265,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -239,6 +283,8 @@
             android:text="Pay:"
             android:layout_weight="1"
             android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textSize="24sp"
             />
         <TextView
@@ -246,8 +292,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
     </LinearLayout>
 </LinearLayout>
+</ScrollView>

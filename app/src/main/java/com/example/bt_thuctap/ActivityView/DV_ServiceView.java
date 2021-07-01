@@ -5,9 +5,12 @@ import androidx.appcompat.widget.SearchView;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.bt_thuctap.Detail.DV_Service_Detail;
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.adapter.DV_ServiceAdapter;
 import com.example.bt_thuctap.common.Constant;
@@ -33,10 +37,10 @@ import java.util.Map;
 
 public class DV_ServiceView extends AppCompatActivity {
 
-
+    public static final String TITLE2="Thôngtinchitiếdichvu";
     private Gson gson = new Gson();
     ArrayList<DV_Service> dv_serviceArray = new ArrayList<>();
-    DV_ServiceAdapter dv_serviceAdapter;
+     private DV_ServiceAdapter dv_serviceAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +96,7 @@ public class DV_ServiceView extends AppCompatActivity {
         searchView_dv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-               //dv_serviceAdapter.getFilter().filter(query);
+
                 Toast.makeText(getApplication(),query,Toast.LENGTH_SHORT).show();
 
                 return false;
@@ -100,12 +104,21 @@ public class DV_ServiceView extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                dv_serviceAdapter.getFilter().filter(newText);
-
+                dv_serviceAdapter.Filter(newText.trim());
                 return false;
             }
         });
 
+
+        lv_dichvu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent =new Intent(DV_ServiceView.this, DV_Service_Detail.class);
+                intent.putExtra(TITLE2,dv_serviceArray.get(position));
+                startActivity(intent);
+            }
+        });
     }
 
     }

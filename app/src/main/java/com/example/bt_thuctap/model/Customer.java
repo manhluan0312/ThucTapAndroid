@@ -13,8 +13,7 @@ public class Customer implements Serializable {
     @SerializedName("sex")
     private boolean GioiTinh;
     @SerializedName("phone")
-    private int SDT;
-
+    private String SDT;
 
     public int getMaKH() {
         return MaKH;
@@ -48,11 +47,11 @@ public class Customer implements Serializable {
         GioiTinh = gioiTinh;
     }
 
-    public int getSDT() {
+    public String getSDT() {
         return SDT;
     }
 
-    public void setSDT(int SDT) {
+    public void setSDT(String SDT) {
         this.SDT = SDT;
     }
 }

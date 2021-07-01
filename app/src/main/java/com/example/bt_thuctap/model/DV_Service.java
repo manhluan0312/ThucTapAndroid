@@ -2,7 +2,9 @@ package com.example.bt_thuctap.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DV_Service
+import java.io.Serializable;
+
+public class DV_Service implements Serializable
 {
     @SerializedName("id")
     private int Id;

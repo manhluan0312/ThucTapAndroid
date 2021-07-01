@@ -11,7 +11,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THÔNG TIN DỊCH VỤ  "
+        android:text="THÔNG TIN CHI TIẾT  "
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:textColor="@color/red"
         android:layout_gravity="center"
         android:textSize="24sp"
@@ -27,6 +29,8 @@
             android:layout_height="wrap_content"
             android:text="Mã dịch vụ:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -35,6 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textSize="24sp"
             />
@@ -50,6 +56,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tên dịch vụ: "
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:layout_weight="1"
             android:textSize="24sp"
@@ -58,6 +66,8 @@
             android:id="@+id/tv_tendv_detail"
             android:textStyle="italic"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
@@ -76,6 +86,8 @@
             android:text="Giá dịch vụ:"
             android:layout_weight="1"
             android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textSize="24sp"
             />
         <TextView
@@ -83,6 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -99,6 +113,8 @@
             android:layout_height="wrap_content"
             android:text="Số ngày của dịch vụ :"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -107,6 +123,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />

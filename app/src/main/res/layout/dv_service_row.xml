@@ -9,13 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MaDV"
+        android:textStyle="bold"
         android:textSize="24sp"
         />
     <TextView
         android:id="@+id/tv_ten_dv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tên dịch vụ  "
+        android:text="Tên dịch vụ "
+        android:textStyle="bold"
         android:textSize="24sp"
         />
     <TextView
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giá dịch vụ  "
+        android:textStyle="italic"
         android:textSize="24sp"
         />
     <TextView
@@ -30,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ngày dịch vụ "
+        android:textStyle="italic"
         android:textSize="24sp"
         />
 

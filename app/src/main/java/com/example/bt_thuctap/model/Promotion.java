@@ -2,9 +2,10 @@ package com.example.bt_thuctap.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Promotion
+public class Promotion implements Serializable
 {
     @SerializedName("id")
     private int id;

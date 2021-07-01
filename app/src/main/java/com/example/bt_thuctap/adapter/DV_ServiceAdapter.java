@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.model.Customer;
@@ -31,7 +32,8 @@ public class DV_ServiceAdapter extends BaseAdapter {
         this.myContext = myContext;
         this.myLayout = myLayout;
         this.arrayDV_Services = arrayDV_Services;
-        this.arrayDV_ServicesOld=arrayDV_Services;
+        this.arrayDV_ServicesOld=new ArrayList<DV_Service>();
+        this.arrayDV_ServicesOld.addAll(arrayDV_ServicesOld);
     }
 
     @Override
@@ -73,40 +75,24 @@ public class DV_ServiceAdapter extends BaseAdapter {
     }
 
 
-    public Filter getFilter()
+    public void Filter(String chartext)
     {
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                String search =constraint.toString();//tu can search
-                if(search.isEmpty())//tu tim kiem
-                {
-                    arrayDV_Services=arrayDV_ServicesOld;//danh sach moi bang ds ban dau
-                }
-                else
-                {
-                    ArrayList<DV_Service> list =new ArrayList<>();
-                    for(DV_Service dv_service:arrayDV_ServicesOld)
-                    {
-                        if(dv_service.getTenDV().toLowerCase().contains(search.toLowerCase()))  //ep kieu tu can tim ve in thuong
-                        {
-                            list.add(dv_service);//tra ve list tu can tim phu hop
-                        }
-                    }
-
-                    arrayDV_Services =list;
-                }
-                FilterResults filterResults=new FilterResults();
-                filterResults.values=arrayDV_Services;//tra ve ket qua
-
-                return filterResults;
+        chartext=chartext.toLowerCase(Locale.getDefault());
+        arrayDV_Services.clear();
+        if(chartext.length()==0)
+        {
+            arrayDV_Services.addAll(arrayDV_ServicesOld);
+        }
+        else
+        {
+            for (DV_Service dv:arrayDV_ServicesOld)
+            {
+                 if(dv.getTenDV().toLowerCase(Locale.getDefault()).contains(chartext))
+                 {
+                     arrayDV_Services.add(dv);
+                 }
             }
-
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-               arrayDV_Services= (ArrayList<DV_Service>) results.values;
-               notifyDataSetChanged();
-            }
-        };
+        }
+        notifyDataSetChanged();
     }
 }

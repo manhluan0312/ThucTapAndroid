@@ -2,8 +2,11 @@ package com.example.bt_thuctap.ActivityView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,6 +17,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.bt_thuctap.API.APIResponeDangKiDVModel;
+import com.example.bt_thuctap.Detail.Customer_Detail;
+import com.example.bt_thuctap.Detail.DangKiDV_Detail;
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.adapter.DangKiDVAdapter;
 import com.example.bt_thuctap.common.Constant;
@@ -23,13 +28,18 @@ import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
+import java.nio.channels.Channels;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DangKiDVView extends AppCompatActivity {
+
+    public static final String TITLE1="Thôngtinchitiếtdangkidichvu";
     private Gson gson = new Gson();
-    ArrayList<DangKiDV> customerArray = new ArrayList<>();
+
+    ArrayList<DangKiDV> dangKiDVArray = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +81,16 @@ public class DangKiDVView extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(JsonObjectRequest);
+
+
+        lv_dkdv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent =new Intent(DangKiDVView.this, DangKiDV_Detail.class);
+                intent.putExtra(TITLE1,  dangKiDVArray.get(position));
+                startActivity(intent);
+            }
+        });
     }
-
-
     }

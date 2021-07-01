@@ -11,9 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THÔNG TIN KHÁCH HÀNG "
+        android:text="THÔNG TIN CHI TIẾT"
         android:textColor="@color/red"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:textSize="24sp"
         />
     <LinearLayout
@@ -28,6 +30,8 @@
         android:text="Mã khách hàng:"
         android:layout_weight="1"
         android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:textSize="24sp"
         />
     <TextView
@@ -35,6 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="italic"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="1"
         android:textSize="24sp"
         />
@@ -51,6 +57,8 @@
             android:layout_height="wrap_content"
             android:text="Tên khách hàng: "
             android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textSize="24sp"
             />
@@ -58,6 +66,8 @@
             android:id="@+id/tv_tenkh_detail"
             android:textStyle="italic"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
@@ -74,6 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Địa chỉ:"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -83,6 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />
@@ -99,6 +113,8 @@
             android:layout_height="wrap_content"
             android:text="Giới tính:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -108,6 +124,8 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="italic"
             />
     </LinearLayout>
@@ -123,6 +141,8 @@
             android:layout_height="wrap_content"
             android:text="Số điện thoại:"
             android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="24sp"
             />
@@ -131,6 +151,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:textStyle="italic"
             />

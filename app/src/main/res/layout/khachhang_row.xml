@@ -6,6 +6,7 @@
 
 <TextView
     android:id="@+id/tv_Makh"
+    android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="MaKH"
@@ -16,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tên khách hàng "
+        android:textStyle="bold"
         android:textSize="24sp"
         />
     <TextView
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Địa chỉ "
+        android:textStyle="italic"
         android:textSize="24sp"
         />
     <TextView
@@ -30,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giới tính "
+        android:textStyle="italic"
         android:textSize="24sp"
         />
 
@@ -38,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Số điện thoại "
+        android:textStyle="italic"
         android:textSize="24sp"
         />
-
 </LinearLayout>

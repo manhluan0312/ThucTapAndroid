@@ -82,25 +82,15 @@ public class CustomerView extends AppCompatActivity {
         requestQueue.add(JsonObjectRequest);
 
 
-
-
-
-
-
         lv_khachhang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Customer customer ;
 
                 Intent intent =new Intent(CustomerView.this, Customer_Detail.class);
-
-                intent.putExtra("ID",customerArray.get(position).getMaKH());
-                intent.putExtra("Ten",customerArray.get(position).getTenKH());
-                intent.putExtra("DiaChi",customerArray.get(position).getDiaChi());
-                intent.putExtra("GioiTinh",customerArray.get(position).isGioiTinh());
-                intent.putExtra("SDT",customerArray.get(position).getSDT());
+                intent.putExtra(TITLE,customerArray.get(position));
                 startActivity(intent);
+
             }
         });
     }

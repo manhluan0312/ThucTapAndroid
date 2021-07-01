@@ -19,17 +19,14 @@ public class Customer_Detail extends AppCompatActivity {
         setContentView(R.layout.activity_customer_detail);
         AnhXa();
 
-        String id=getIntent().getStringExtra("ID");
-        String ten=getIntent().getStringExtra("Ten");
-        String diachi=getIntent().getStringExtra("DiaChi");
-        String gioitinh=getIntent().getStringExtra("GioiTinh");
-        String sdt=getIntent().getStringExtra("SDT");
+        Intent intent =getIntent();;
+        Customer customer = (Customer)intent.getSerializableExtra(TITLE);
 
-        tv_mkh.setText(id);
-        tv_tenkh.setText(ten);
-        tv_diachi.setText(diachi);
-        tv_gioitinh.setText(gioitinh);
-        tv_sdt.setText(sdt);
+        tv_mkh.setText(""+customer.getMaKH());
+        tv_tenkh.setText(""+customer.getTenKH());
+        tv_diachi.setText(""+customer.getDiaChi());
+        tv_gioitinh.setText(""+customer.isGioiTinh());
+        tv_sdt.setText(""+customer.getSDT());
 
     }
 

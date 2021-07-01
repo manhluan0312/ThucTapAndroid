@@ -2,8 +2,11 @@ package com.example.bt_thuctap.ActivityView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.Request;
@@ -14,6 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.bt_thuctap.API.APIResponeDangKiDVModel;
 import com.example.bt_thuctap.API.APIResponePromotionModel;
+import com.example.bt_thuctap.Detail.Promotion_Detail;
 import com.example.bt_thuctap.R;
 import com.example.bt_thuctap.adapter.CustomerAdapter;
 import com.example.bt_thuctap.adapter.PromotionAdapter;
@@ -29,8 +33,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PromotionView extends AppCompatActivity {
+
+    public static final String TITLE3="Thôngtinchitiếtkhuyenmai";
+
     private Gson gson = new Gson();
-    ArrayList<Promotion> customerArray = new ArrayList<>();
+    ArrayList<Promotion> promotionArray = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,5 +80,15 @@ public class PromotionView extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(JsonObjectRequest);
 
+        lv_km.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent =new Intent(PromotionView.this, Promotion_Detail.class);
+                intent.putExtra(TITLE3,promotionArray.get(position));
+                startActivity(intent);
+
+            }
+        });
     }
 }
