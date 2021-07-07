@@ -3,12 +3,14 @@ package com.example.bt_thuctap.ActivityView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -40,11 +42,14 @@ public class DangKiDVView extends AppCompatActivity {
     private Gson gson = new Gson();
 
     ArrayList<DangKiDV> dangKiDVArray = new ArrayList<>();
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki_dvview);
         ListView lv_dkdv=findViewById(R.id.listview_dK_goi_DV);
+
+        sharedPreferences=getSharedPreferences("datatoken",MODE_PRIVATE);
 
         String url = "http://192.168.1.54/api/register";
 
@@ -55,11 +60,6 @@ public class DangKiDVView extends AppCompatActivity {
                 APIResponeDangKiDVModel apiResponseModel = gson.fromJson(jsonResponse, APIResponeDangKiDVModel.class);
 
                 ArrayList lsTest =apiResponseModel.getData();
-
-                /*
-
-                 */
-
                 DangKiDVAdapter adapter=new DangKiDVAdapter(DangKiDVView.this,R.layout.dangkidv_row,lsTest);
                 lv_dkdv.setAdapter(adapter);
 
@@ -74,7 +74,7 @@ public class DangKiDVView extends AppCompatActivity {
             public Map<String, String> getHeaders() {
                 HashMap<String, String> header = new HashMap<>();
                 header.put("Accept", "*/*");
-                header.put("Authorization", "Bearer " + Constant.TOKEN);
+                header.put("Authorization", "Bearer " + sharedPreferences.getString("token",""));
                 return header;
             }
         };
@@ -87,9 +87,9 @@ public class DangKiDVView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent =new Intent(DangKiDVView.this, DangKiDV_Detail.class);
-                intent.putExtra(TITLE1,  dangKiDVArray.get(position));
-                startActivity(intent);
+                //DangKiDV dangKiDV =dangKiDVArray.get(position);
+                //Intent intent =new Intent(DangKiDVView.this, DangKiDV_Detail.class);
+                //startActivity(intent);
             }
         });
     }

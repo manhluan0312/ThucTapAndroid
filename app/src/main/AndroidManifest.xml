@@ -25,6 +25,7 @@
         <activity android:name=".Detail.DangKiDV_Detail"
             android:label="Chi tiết đăng ký dịch vụ "
             android:parentActivityName=".ActivityView.DangKiDVView" />
+
         <activity
             android:name=".Detail.Customer_Detail"
             android:label="Chi tiết khách hàng "
@@ -58,5 +59,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

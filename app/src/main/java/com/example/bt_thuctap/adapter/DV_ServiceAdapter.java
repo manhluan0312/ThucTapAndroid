@@ -26,14 +26,11 @@ public class DV_ServiceAdapter extends BaseAdapter {
     Context myContext;
     int myLayout;
     ArrayList<DV_Service> arrayDV_Services;
-    ArrayList<DV_Service> arrayDV_ServicesOld;
 
     public DV_ServiceAdapter(Context myContext, int myLayout, ArrayList<DV_Service> arrayDV_Services) {
         this.myContext = myContext;
         this.myLayout = myLayout;
         this.arrayDV_Services = arrayDV_Services;
-        this.arrayDV_ServicesOld=new ArrayList<DV_Service>();
-        this.arrayDV_ServicesOld.addAll(arrayDV_ServicesOld);
     }
 
     @Override
@@ -55,7 +52,7 @@ public class DV_ServiceAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView=inflater.inflate(myLayout,null);
+        convertView = inflater.inflate(myLayout, null);
 
         TextView tv_iddv = convertView.findViewById(R.id.id_dv);
         TextView tv_tendv = convertView.findViewById(R.id.tv_ten_dv);
@@ -63,36 +60,13 @@ public class DV_ServiceAdapter extends BaseAdapter {
         TextView tv_ngaydv = convertView.findViewById(R.id.tv_ngay_dv);
 
 
-        DV_Service dv_service= arrayDV_Services.get(position);
+        DV_Service dv_service = arrayDV_Services.get(position);
 
         tv_iddv.setText("Mã dịch vụ :" + dv_service.getId());
-        tv_tendv.setText("Tên dịch vụ :"+dv_service.getTenDV());
-        tv_gia.setText("Giá dịch vụ :"+dv_service.getGia());
-        tv_ngaydv.setText("Số ngày đăng kí dịch vụ :" +dv_service.getNgayDV());
+        tv_tendv.setText("Tên dịch vụ :" + dv_service.getTenDV());
+        tv_gia.setText("Giá dịch vụ :" + dv_service.getGia());
+        tv_ngaydv.setText("Số ngày đăng kí dịch vụ :" + dv_service.getNgayDV());
 
         return convertView;
-
     }
-
-
-    public void Filter(String chartext)
-    {
-        chartext=chartext.toLowerCase(Locale.getDefault());
-        arrayDV_Services.clear();
-        if(chartext.length()==0)
-        {
-            arrayDV_Services.addAll(arrayDV_ServicesOld);
-        }
-        else
-        {
-            for (DV_Service dv:arrayDV_ServicesOld)
-            {
-                 if(dv.getTenDV().toLowerCase(Locale.getDefault()).contains(chartext))
-                 {
-                     arrayDV_Services.add(dv);
-                 }
-            }
-        }
-        notifyDataSetChanged();
     }
-}

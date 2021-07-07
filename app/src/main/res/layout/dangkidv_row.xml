@@ -73,16 +73,6 @@
         android:text="Thời gian kết thúc khuyến mại  "
         android:textSize="24sp"
         />
-
-    <TextView
-        android:id="@+id/tv_gia_dkdv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Giá khuyến mại  "
-        android:textStyle="italic"
-        android:textSize="24sp"
-        />
-
     <TextView
         android:id="@+id/tv_pay_dkdv"
         android:layout_width="wrap_content"

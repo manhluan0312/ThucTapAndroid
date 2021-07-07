@@ -1,6 +1,5 @@
 package com.example.bt_thuctap.model;
 import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 public class Customer implements Serializable {
@@ -13,7 +12,7 @@ public class Customer implements Serializable {
     @SerializedName("sex")
     private boolean GioiTinh;
     @SerializedName("phone")
-    private String SDT;
+    private int  SDT;
 
     public int getMaKH() {
         return MaKH;
@@ -47,11 +46,11 @@ public class Customer implements Serializable {
         GioiTinh = gioiTinh;
     }
 
-    public String getSDT() {
+    public int getSDT() {
         return SDT;
     }
 
-    public void setSDT(String SDT) {
+    public void setSDT(int SDT) {
         this.SDT = SDT;
     }
 }

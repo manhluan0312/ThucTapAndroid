@@ -73,7 +73,7 @@ public class CustomerAdapter extends BaseAdapter {
 
         return convertView;
 
-    }
 
+    }
     }
 

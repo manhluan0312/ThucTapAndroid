@@ -63,14 +63,13 @@ public class PromotionAdapter extends BaseAdapter
 
         Promotion promotion=new Promotion();
         promotion =arrayPromotion.get(position);
-        tv_id_pro.setText(""+promotion.getId());
-        tv_id_service.setText(""+promotion.getId_service());
-        tv_tenkm.setText(""+promotion.getTenKhuyenMai());
-        tv_tgbd_km.setText(""+promotion.getThoiGianBatDauKM());
-        tv_tgkt_km.setText(""+ promotion.getThoiGianKetThucKM());
-        tv_gia_km.setText(""+promotion.getGiaKM());
-        tv_ngaykm.setText(""+promotion.getSoNgayKM());
-
+        tv_id_pro.setText("Mã khuyến mại:"+promotion.getId());
+        tv_id_service.setText("Mã dịch vụ:"+promotion.getId_service());
+        tv_tenkm.setText("Tên khuyến mại:"+promotion.getTenKhuyenMai());
+        tv_tgbd_km.setText("TGBD khuyến mại:"+promotion.getThoiGianBatDauKM());
+        tv_tgkt_km.setText("TGKT khuyến mại:"+ promotion.getThoiGianKetThucKM());
+        tv_gia_km.setText("Giá khuyến mại:"+promotion.getGiaKM());
+        tv_ngaykm.setText("Số ngày khuyến mại:"+promotion.getSoNgayKM());
 
         return convertView;
     }

@@ -22,13 +22,18 @@ public class DV_Service_Detail extends AppCompatActivity {
         setContentView(R.layout.activity_dv_service_detail);
         AnhXa();
 
-        Intent intent =getIntent();;
-        DV_Service dv_service = (DV_Service) intent.getSerializableExtra(TITLE2);
+        DV_Service dv_service =new DV_Service();
 
-        tv_id.setText(""+dv_service.getId());
-        tv_ten.setText(""+dv_service.getTenDV());
-        tv_gia.setText(""+dv_service.getGia());
-        tv_ngay.setText(""+dv_service.getNgayDV());
+        Intent intent =getIntent();
+        int id=getIntent().getIntExtra("ID",0);
+        String ten =getIntent().getStringExtra("Ten");
+        String ngay =getIntent().getStringExtra("Ngay");
+        String gia =getIntent().getStringExtra("Gia");
+
+        tv_id.setText(""+id);
+        tv_ten.setText(""+ten);
+        tv_ngay.setText(""+ngay);
+        tv_gia.setText(""+gia);
 
     }
 

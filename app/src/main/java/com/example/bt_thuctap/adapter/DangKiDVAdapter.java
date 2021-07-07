@@ -55,29 +55,29 @@ public class DangKiDVAdapter extends BaseAdapter
         TextView tv_tgkh=convertView.findViewById(R.id.tv_tgkh_dkdv);
         TextView tv_tgkt=convertView.findViewById(R.id.tv_tgkt_dkdv);
         TextView tv_ngay=convertView.findViewById(R.id.tv_ngay_dkdv);
-        TextView tv_gia=convertView.findViewById(R.id.tv_gia_dkdv);
         TextView tv_pay=convertView.findViewById(R.id.tv_pay_dkdv);
 
         DangKiDV dangKiDV=dangKiDVList.get(position);
 
 
-        tv_id_dk.setText(""+dangKiDV.getId());
-        tv_id_service.setText(""+dangKiDV.getId_service());
-        tv_id_promotion.setText(""+dangKiDV.getId_promtion());
-        tv_id_customer.setText(""+dangKiDV.getId_customer());
-        tv_tgdk.setText(""+dangKiDV.getThoiGianDK());
-        tv_tgkh.setText(""+dangKiDV.getThoiGianKichHoat());
-        tv_tgkt.setText("" +dangKiDV.getThoiGianKetThuc());
-        tv_ngay.setText(""+dangKiDV.getSoNgayDK());
-        tv_gia.setText(""+dangKiDV.getGia());
+        tv_id_dk.setText("Mã đăng kí dịch vụ:"+dangKiDV.getId());
+        tv_id_service.setText("Mã dịch vụ:"+dangKiDV.getId_service());
+        tv_id_promotion.setText("Mã khuyến mại:"+dangKiDV.getId_promtion());
+        tv_id_customer.setText("Mã khách hàng:"+dangKiDV.getId_customer());
+        tv_tgdk.setText("TG đăng ký:"+dangKiDV.getThoiGianDK());
+        tv_tgkh.setText("TG kích hoạt:"+dangKiDV.getThoiGianKichHoat());
+        tv_tgkt.setText("TG kết thúc:" +dangKiDV.getThoiGianKetThuc());
+        tv_ngay.setText("Số ngày DK dịch vụ:"+dangKiDV.getSoNgayDK());
+
 
         if(dangKiDV.isPay()==true)
        {
-           tv_pay.setText("1");
+           tv_pay.setText("Tình trạng:Đã thanh toán");
        }
-       else{
-           tv_pay.setText("0");
-       }
+       else
+           {
+           tv_pay.setText("Tình trạng :Chưa thanh toán");
+           }
 
         return convertView;
     }

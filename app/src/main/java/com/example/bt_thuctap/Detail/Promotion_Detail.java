@@ -22,16 +22,7 @@ public class Promotion_Detail extends AppCompatActivity {
         setContentView(R.layout.activity_promotion_detail);
         AnhXa();
 
-        Intent intent =getIntent();;
-        Promotion promotion = (Promotion) intent.getSerializableExtra(TITLE3);
-
-        tv_id.setText(""+promotion.getId());
-        tv_dvid.setText(""+promotion.getId_service());
-        tv_ten.setText(""+promotion.getTenKhuyenMai());
-        tv_tgbd.setText(""+promotion.getThoiGianBatDauKM());
-        tv_tgkt.setText(""+promotion.getThoiGianKetThucKM());
-        tv_giakm.setText(""+promotion.getGiaKM());
-        tv_ngaykm.setText(""+promotion.getSoNgayKM());
+        Intent intent =getIntent();
     }
 
     private void AnhXa()

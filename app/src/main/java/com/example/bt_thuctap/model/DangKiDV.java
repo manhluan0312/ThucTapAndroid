@@ -31,9 +31,6 @@ public class DangKiDV implements Serializable
     @SerializedName("day")
     private int SoNgayDK;
 
-    @SerializedName("price")
-    private float Gia;
-
     @SerializedName("pay")
     private boolean Pay;
 
@@ -99,14 +96,6 @@ public class DangKiDV implements Serializable
 
     public void setSoNgayDK(int soNgayDK) {
         SoNgayDK = soNgayDK;
-    }
-
-    public float getGia() {
-        return Gia;
-    }
-
-    public void setGia(float gia) {
-        Gia = gia;
     }
 
     public boolean isPay() {

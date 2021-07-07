@@ -23,18 +23,6 @@ public class DangKiDV_Detail extends AppCompatActivity {
         AnhXa();
 
         Intent intent =getIntent();;
-        DangKiDV dangKiDV = (DangKiDV) intent.getSerializableExtra(DangKiDVView.TITLE1);
-
-        tv_id.setText(""+dangKiDV.getId());
-        tv_iddv.setText(""+dangKiDV.getId_service());
-        tv_km.setText(""+dangKiDV.getId_promtion());
-        tv_idkh.setText(""+dangKiDV.getId_customer());
-        tv_tgdk.setText(""+dangKiDV.getThoiGianDK());
-        tv_tgkh.setText(""+dangKiDV.getThoiGianKichHoat());
-        tv_tgkt.setText(""+dangKiDV.getThoiGianKetThuc());
-        tv_songaydk.setText(""+dangKiDV.getSoNgayDK());
-        tv_gia.setText(""+dangKiDV.getGia());
-        tv_pay.setText(""+dangKiDV.isPay());
 
     }
 
@@ -48,7 +36,6 @@ public class DangKiDV_Detail extends AppCompatActivity {
         tv_tgkh=findViewById(R.id.tv_tgkh_dkgdv_dettail);
         tv_tgkt=findViewById(R.id.tv_tgkt_dkgdv_dettail);
         tv_songaydk=findViewById(R.id.tv_day_dkgdv_dettail);
-        tv_gia=findViewById(R.id.tv_gia_dkgdv_dettail);
-        tv_pay=findViewById(R.id.tv_pay_dkgdv_dettail);
+        //tv_pay=findViewById(R.id.tv_pay_dkgdv_dettail);
     }
 }

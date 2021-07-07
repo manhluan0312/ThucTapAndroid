@@ -1,11 +1,21 @@
 package com.example.bt_thuctap.model;
 
-public class TaiKhoan
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+
+public class DuLieuNhanVe
 {
     private  String access_token;
     private  String expires;
     private  String refresh_token;
+    private  String fullname;
     private  String username;
+    private  String unitId;
+    private ArrayList<String> privileges;
+
+    public DuLieuNhanVe() {
+    }
 
     public String getAccess_token() {
         return access_token;
@@ -31,11 +41,35 @@ public class TaiKhoan
         this.refresh_token = refresh_token;
     }
 
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
     public String getUsername() {
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getUnitId() {
+        return unitId;
+    }
+
+    public void setUnitId(String unitId) {
+        this.unitId = unitId;
+    }
+
+    public ArrayList<String> getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(ArrayList<String> privileges) {
+        this.privileges = privileges;
     }
 }

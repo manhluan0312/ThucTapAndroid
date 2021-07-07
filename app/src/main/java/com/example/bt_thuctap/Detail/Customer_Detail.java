@@ -19,14 +19,9 @@ public class Customer_Detail extends AppCompatActivity {
         setContentView(R.layout.activity_customer_detail);
         AnhXa();
 
-        Intent intent =getIntent();;
-        Customer customer = (Customer)intent.getSerializableExtra(TITLE);
+        Customer customer =new Customer();
 
-        tv_mkh.setText(""+customer.getMaKH());
-        tv_tenkh.setText(""+customer.getTenKH());
-        tv_diachi.setText(""+customer.getDiaChi());
-        tv_gioitinh.setText(""+customer.isGioiTinh());
-        tv_sdt.setText(""+customer.getSDT());
+
 
     }
 
